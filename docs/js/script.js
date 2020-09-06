@@ -35,3 +35,76 @@ for (let item of formInputs) {
         }
     })
 }
+
+//Filter
+
+let containerEl = document.querySelector('#portfolio-project');
+let mixer = mixitup(containerEl, {
+    classNames: {
+        block: ""
+    }
+})
+//FORM VALIDATE
+$('#contact-form').validate({
+    rules: {
+        email: {
+            required: true,
+            email: true
+        },
+        topic: {
+            required: true
+        },
+        message: {
+            required: true
+        }
+    },
+    messages: {
+        email: {
+            required: 'Введите email',
+            email: 'отсутсвует символ @'
+        },
+        theme: {
+            required: 'Введите тему сообщения'
+        },
+        message: {
+            required: 'Введите текст сообщения'
+        }
+    },
+    submitHandler: function (form) {
+        ajaxFormSubmit();
+    }
+})
+// Подключение точек пагинации справа page-nav
+$('#page-nav').onePageNav({
+    currentClass: 'active',
+    changeHash: false,
+    scrollSpeed: 750,
+    scrollThreshold: 0.5,
+    filter: '',
+    easing: 'swing',
+    begin: function () {},
+    end: function () {},
+    scrollChange: function ($currentListItem) {}
+});
+// Функция AJAX запрса на сервер
+
+function ajaxFormSubmit() {
+
+    let string = $("#contact-form").serialize(); // Соханяем данные введенные в форму в строку.
+
+    //Формируем ajax запрос
+    $.ajax({
+        type: "POST", // Тип запроса - POST
+        url: "php/mail.php", // Куда отправляем запрос
+        data: string, // Какие даные отправляем, в данном случае отправляем переменную string
+
+        // Функция если все прошло успешно
+        success: function (html) {
+            $("#contact-form").slideUp(800);
+            $('#answer').html(html);
+        }
+    });
+
+    // Чтобы по Submit больше ничего не выполнялось - делаем возврат false чтобы прервать цепчку срабатывания остальных функций
+    return false;
+}

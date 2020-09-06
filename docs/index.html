@@ -1,24 +1,36 @@
-<!DOCTYPE html>
+
+<!-- Иконки в HEADER-е-->
+<!-- Мобильное меню-->
+<!-- Стрелка вверх--><!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="./fonts/mplus1p.css"/>
+    <link rel="stylesheet" href="./css/aos.css"/>
     <link rel="stylesheet" href="./css/style.css"/>
     <title>Document</title>
   </head>
   <body>
     <div id="overlay"></div>
-    <header class="header">
-      <div class="header__navbar"><a class="logo line-bottom" href="#!">КМ</a>
-        <nav class="header__nav"><a class="header__nav-item" href="#!">Главная</a><a class="header__nav-item" href="#!">Работы</a><a class="header__nav-item" href="#!">Контакты</a></nav>
-        <div class="header__social"><a class="header__social-items header__social-items--in" href="https://linkedin.com/" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" class="svg-inline--fa fa-linkedin-in fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+    <div class="pagination">
+      <ul id="page-nav">
+        <li class="active"><a href="#header"></a></li>
+        <li><a href="#portfolio"></a></li>
+        <li><a href="#timeline"></a></li>
+        <li><a href="#contacts"></a></li>
+      </ul>
+    </div>
+    <header class="header" id="header">
+      <div class="header__navbar"><a class="logo line-bottom" href="index.html" data-aos="zoom-in" data-aos-delay="300">КМ</a>
+        <nav class="header__nav"><a class="header__nav-item" href="index.html" data-aos="zoom-in" data-aos-delay="400">Главная</a><a class="header__nav-item" href="#portfolio" data-aos="zoom-in" data-aos-delay="600">Работы</a><a class="header__nav-item" href="#contacts" data-aos="zoom-in" data-aos-delay="800">Контакты</a></nav>
+        <div class="header__social"><a class="header__social-items header__social-items--in" href="https://linkedin.com/" target="_blank" data-aos="zoom-in" data-aos-delay="800"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" class="svg-inline--fa fa-linkedin-in fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
 <path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
 </path>
-</svg></a><a class="header__social-items header__social-items--git" href="https://github.com/MazaevKA" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+</svg></a><a class="header__social-items header__social-items--git" href="https://github.com/MazaevKA" target="_blank" data-aos="zoom-in" data-aos-delay="1000"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
 <path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
 </path>
-</svg></a><a class="header__social-items header__social-items--vk" href="https://vk.com/mazaevka" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="vk" class="svg-inline--fa fa-vk fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+</svg></a><a class="header__social-items header__social-items--vk" href="https://vk.com/mazaevka" target="_blank" data-aos="zoom-in" data-aos-delay="1200"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="vk" class="svg-inline--fa fa-vk fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
 <path fill="currentColor" d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z">
 </path>
 </svg></a>
@@ -27,18 +39,18 @@
       <div class="container">
         <div class="header__content">
           <div class="header__content-info">
-            <h1 class="header__content-title"><span class="line-bottom">Константин</span><span class="line-bottom">Мазаев</span></h1>
+            <h1 class="header__content-title" data-aos="fade-right" data-aos-duration="1000"><span class="line-bottom">Константин</span><span class="line-bottom">Мазаев</span></h1>
             <div class="header__content-text">
               <p>Верстальщик сайтов, веб-разработчик. Оперативная верстка. Работаю с соблюдением сроков и выполнением ТЗ. </p>
             </div>
-            <div class="header__content-links"><a class="button-yellow" href="#!">Познакомиться</a><a class="button-white" href="#!">Контакты</a></div>
+            <div class="header__content-links"><a class="button-yellow" href="#meet">Познакомиться</a><a class="button-white" href="#contacts">Контакты</a></div>
           </div>
-          <div class="header__content-img"><img src="./img/header/zan-ilic-0WzeC6JtbHU-unsplash.jpg" alt="Константин Мазаев"/></div>
+          <div class="header__content-img" data-aos="fade-left" data-aos-duration="1000"><img src="./img/header/zan-ilic-0WzeC6JtbHU-unsplash.jpg" alt="Константин Мазаев"/></div>
         </div>
       </div>
-      <div class="header__banner"><img src="./img/header/header-img.jpg" alt=""/></div>
+      <div class="header__banner"><img src="./img/header/header-img.jpg" alt="banner"/></div>
       <div class="container">
-        <div class="header-skills">
+        <div class="header-skills" data-aos="zoom-in" data-aos-offset="200" data-aos-duration="1000" id="meet">
           <div class="header-skills__content">
             <h3 class="header-skills__title">Что я умею:</h3>
             <ul class="header-skills__content-list">
@@ -47,7 +59,7 @@
               <li>адаптивная верстка под мобильные устройства.</li>
               <li>оптимизация под retina экраны</li>
               <li>с Bootstrap и без него.</li>
-            </ul><a class="button-yellow" href="#!">Смотреть работы</a>
+            </ul><a class="button-yellow" href="#portfolio">Смотреть работы</a>
           </div>
           <div class="header-skills__contact">
             <h3 class="header-skills__title">На связи:</h3>
@@ -66,21 +78,26 @@
         </div>
       </div>
     </header>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="container">
         <div class="portfolio__wrapper">
           <h2 class="portfolio__title line-bottom">Портфолио</h2>
-          <div class="portfolio__filter"><a class="portfolio__filter-title active" href="#!">Все работы</a><a class="portfolio__filter-title" href="#!">Bootstrap</a><a class="portfolio__filter-title" href="#!">WordPress</a><a class="portfolio__filter-title" href="#!">Frontend</a></div>
-          <div class="portfolio__cards-wrapper">
+          <div class="portfolio__filter">
+            <button class="portfolio__filter-title control-active" href="#!" data-filter="all">Все работы</button>
+            <button class="portfolio__filter-title" href="#!" data-filter=".boots">Bootstrap</button>
+            <button class="portfolio__filter-title" href="#!" data-filter=".wp">WordPress</button>
+            <button class="portfolio__filter-title" href="#!" data-filter=".frontend">Frontend</button>
+          </div>
+          <div class="portfolio__cards-wrapper" id="portfolio-project">
             <div class="portfolio__cards-big">
-              <div class="portfolio__card"><a class="portfolio__card-link" href="#!"><img class="portfolio__card-img" src="./img/portfolio/portfolio-big-1.jpg" alt=""/>
+              <div class="portfolio__card mix boots"><a class="portfolio__card-link" href="#!"><img class="portfolio__card-img" src="./img/portfolio/portfolio-big-1.jpg" alt=""/>
                   <button class="portfolio-btn" href="#!">Смотреть проект</button></a>
                 <div class="portfolio__card-desc"><a href="#!">
                     <h3 class="portfolio__card-title">Верстка “Форест тревел”</h3></a>
                   <h4 class="portfolio__card-subtitle">Верстка многостраничного сайта.</h4>
                 </div>
               </div>
-              <div class="portfolio__card"><a class="portfolio__card-link" href="#!"><img class="portfolio__card-img" src="./img/portfolio/portfolio-big-2.jpg" alt=""/>
+              <div class="portfolio__card mix wp"><a class="portfolio__card-link" href="#!"><img class="portfolio__card-img" src="./img/portfolio/portfolio-big-2.jpg" alt=""/>
                   <button class="portfolio-btn" href="#!">Смотреть проект</button></a>
                 <div class="portfolio__card-desc"><a href="#!">
                     <h3 class="portfolio__card-title">Сайт для коворкинга “Мечта”</h3></a>
@@ -89,21 +106,21 @@
               </div>
             </div>
             <div class="portfolio__cards-small">
-              <div class="portfolio__card"><a class="portfolio__card-link" href="#!"><img class="portfolio__card-img" src="./img/portfolio/portfolio-small-1.jpg" alt=""/>
+              <div class="portfolio__card mix wp boots"><a class="portfolio__card-link" href="#!"><img class="portfolio__card-img" src="./img/portfolio/portfolio-small-1.jpg" alt=""/>
                   <button class="portfolio-btn" href="#!">Смотреть проект</button></a>
                 <div class="portfolio__card-desc"><a href="#!">
                     <h3 class="portfolio__card-title">Верстка “Мир Авто”</h3></a>
                   <h4 class="portfolio__card-subtitle">Верстка многостраничного сайта.</h4>
                 </div>
               </div>
-              <div class="portfolio__card"><a class="portfolio__card-link" href="#!"><img class="portfolio__card-img" src="./img/portfolio/portfolio-small-2.jpg" alt=""/>
+              <div class="portfolio__card mix boots"><a class="portfolio__card-link" href="#!"><img class="portfolio__card-img" src="./img/portfolio/portfolio-small-2.jpg" alt=""/>
                   <button class="portfolio-btn" href="#!">Смотреть проект</button></a>
                 <div class="portfolio__card-desc"><a href="#!">
                     <h3 class="portfolio__card-title">Верстка “Мир Авто”</h3></a>
                   <h4 class="portfolio__card-subtitle">Верстка многостраничного сайта.</h4>
                 </div>
               </div>
-              <div class="portfolio__card"><a class="portfolio__card-link" href="#!"><img class="portfolio__card-img" src="./img/portfolio/portfolio-small-3.jpg" alt=""/>
+              <div class="portfolio__card mix frontend"><a class="portfolio__card-link" href="#!"><img class="portfolio__card-img" src="./img/portfolio/portfolio-small-3.jpg" alt=""/>
                   <button class="portfolio-btn" href="#!">Смотреть проект</button></a>
                 <div class="portfolio__card-desc"><a href="#!">
                     <h3 class="portfolio__card-title">Верстка “Мир Авто”</h3></a>
@@ -115,47 +132,47 @@
         </div>
       </div>
     </section>
-    <section class="timeline">
+    <section class="timeline" id="timeline">
       <div class="container">
         <h2 class="timeline__title line-bottom">Как я работаю</h2>
         <div class="timeline__item">
           <div class="timeline__icon"><img src="./img/timeline/timeline-1.png" alt=""/></div>
-          <div class="timeline__content">
+          <div class="timeline__content" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1000">
             <h3 class="timeline__content-title line-bottom">Оцениваю макет</h3>
             <p>Оцениваю объем работы, сложность, нюансы. Задаю вопросы.</p><span class="timeline__content-time">Время: 2 - 4 часа</span>
           </div>
         </div>
         <div class="timeline__item">
           <div class="timeline__icon"><img src="./img/timeline/timeline-2.png" alt=""/></div>
-          <div class="timeline__content">
+          <div class="timeline__content" data-aos="fade-left" data-aos-offset="300" data-aos-duration="1000">
             <h3 class="timeline__content-title line-bottom">ТЗ, смета и график работ</h3>
             <p>Согласовываем техническое задание и график работ по проекту. Осмечиваю стоимость по этапам работы.</p><span class="timeline__content-time">Время: 2 - 4 часа</span>
           </div>
         </div>
         <div class="timeline__item">
           <div class="timeline__icon"><img src="./img/timeline/timeline-3.png" alt=""/></div>
-          <div class="timeline__content">
+          <div class="timeline__content" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1000">
             <h3 class="timeline__content-title line-bottom">Вы держите руку на пульсе</h3>
             <p>Выдаю клиенту доступ к GitHub репозиторию и доске Trello. Вы в любое время можете видеть актуальное состояние проекта и задач.</p><span class="timeline__content-time">Время: 2 часа</span>
           </div>
         </div>
         <div class="timeline__item">
           <div class="timeline__icon"><img src="./img/timeline/timeline-4.png" alt=""/></div>
-          <div class="timeline__content">
+          <div class="timeline__content" data-aos="fade-left" data-aos-offset="300" data-aos-duration="1000">
             <h3 class="timeline__content-title line-bottom">Выполняю каждый этап</h3>
             <p>Поочередно выполняю каждый этап работы. Передаю результаты. Заказчик производит поэтапную оплату.</p><span class="timeline__content-time">Время: 2 - 4 часа</span>
           </div>
         </div>
         <div class="timeline__item">
           <div class="timeline__icon"><img src="./img/timeline/timeline-5.png" alt=""/></div>
-          <div class="timeline__content">
+          <div class="timeline__content" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1000">
             <h3 class="timeline__content-title line-bottom">Финальное ревью проекта</h3>
             <p>Проект готов. Финальное ревью и полировка до идеального состояния. Передаю файлы проекта, заливаю сайт на хостинг заказчика.</p><span class="timeline__content-time">Время: 2 - 4 часа</span>
           </div>
         </div>
       </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <div class="container">
         <div class="contacts__title">
           <h2 class="line-bottom">Контакты</h2>
@@ -174,7 +191,7 @@
                 <p>Телефон</p><a href="tel:+79227263570">+7 (922) 726-35-70</a>
               </li>
               <li class="contacts__list-item">
-                <p>Адрес</p><a href="https://yandex.ru/maps/?um=constructor%3Aed89850fde9f1fd1b085d81649f914b263a4ea078f50af1c5a904476dcc8991b&amp;source=constructorLink" target="_blank">Челябинская обл. г. Сатка</a>
+                <p>Адрес</p><a href="https://yandex.ru/maps/?um=constructor%3Aed89850fde9f1fd1b085d81649f914b263a4ea078f50af1c5a904476dcc8991b&amp;source=constructorLink" target="_blank">Россия, Сатка</a>
               </li>
             </ul>
             <div class="social-main"><a class="github" href="https://github.com/MazaevKA" target="_blank"><svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg">
@@ -188,7 +205,10 @@
 </svg></a></div>
           </div>
           <div class="contacts__form">
-            <form class="form">
+            <form class="form" data-aos="zoom-in" data-aos-offset="300" data-aos-duration="1000" id="contact-form">
+              <input type="hidden" name="project_name" value="mazaevka.ru"/>
+              <input type="hidden" name="admin_email" value="mazaevka.ru@gmail.com"/>
+              <input type="hidden" name="email_from" value="info@mazaevka.ru"/>
               <div class="form__items">
                 <input class="form__field" type="email" name="email"/><span class="fake-placeholder">Ваш email</span>
               </div>
@@ -202,6 +222,7 @@
                 <button class="form__btn button-yellow" type="submit">Отправить</button>
               </div>
             </form>
+            <div id="answer"></div>
           </div>
         </div>
       </div>
@@ -215,7 +236,12 @@
         </div>
       </div>
     </footer>
-    <script src="./js/jquery.min.js"></script>
+    <script src="./js/libs/jquery/jquery.min.js"></script>
+    <script src="./js/libs/mixitup3/mixitup.min.js"></script>
+    <script src="./js/libs/jquery.validate/jquery.validate.js"></script>
+    <script src="./js/libs/nav.js/nav.js"></script>
+    <script src="./js/libs/aos-master/aos.js"></script>
+    <script>AOS.init();</script>
     <script src="./js/script.js"></script>
   </body>
 </html>
